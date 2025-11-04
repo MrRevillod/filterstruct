@@ -1,7 +1,12 @@
-
 # FilterStruct
 
 Simple macro for create instances of structs with more ergonomic syntax.
+
+## Installation
+
+```
+cargo add filterstruct
+```
 
 ## How to use
 
@@ -36,3 +41,14 @@ let filter = user_filter! {
 ```
 
 This will create a `UserFilter` instance with the `id` field set to a new UUID, and all other fields set to their default values.
+
+Also, you can use shorthand for fields that you want to set to `Some(value)`:
+
+```rust
+let email = String::from("some@domain.com");
+
+let filter = user_filter! {
+    email,
+    page: 2,
+}
+```

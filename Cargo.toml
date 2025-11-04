@@ -1,6 +1,12 @@
 [package]
 name = "filterstruct"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+description = "A simple macro for creating struct instances with ergonomic syntax, useful for filters."
+license = "MIT"
+repository = "https://github.com/MrRevillod/filterstruct"
+keywords = ["macro", "filter", "struct", "builder"]
+categories = ["rust-patterns", "development-tools"]
 
 [dependencies]
+uuid = { version = "1.18.1", features = ["v4"] }
